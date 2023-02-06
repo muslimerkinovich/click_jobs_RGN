@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeVC" customModule="click_jobs_RGN" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1y7-31-qlM">
+                    <rect key="frame" x="95" y="222" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="BwV-X7-afW"/>
+                        <constraint firstAttribute="width" secondItem="1y7-31-qlM" secondAttribute="height" id="oju-f7-K7r"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pm0-3z-ltj">
+                    <rect key="frame" x="20" y="740" width="350" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="gks-LW-EwI"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Get started">
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                        <color key="baseBackgroundColor" name="baseColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="startBtnPressed:" destination="-1" eventType="touchUpInside" id="N94-gm-Xbi"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrG-NF-btU">
+                    <rect key="frame" x="132" y="442" width="126" height="32"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Paying IT Jobs Aggregator." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVK-Qx-zaD">
+                    <rect key="frame" x="50" y="494" width="290" height="25"/>
+                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Pm0-3z-ltj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="0vd-WA-mmP"/>
+                <constraint firstItem="SVK-Qx-zaD" firstAttribute="top" secondItem="PrG-NF-btU" secondAttribute="bottom" constant="20" id="3Lx-TS-m6I"/>
+                <constraint firstItem="SVK-Qx-zaD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7sp-dP-PiL"/>
+                <constraint firstItem="1y7-31-qlM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8mH-B7-SBf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pm0-3z-ltj" secondAttribute="trailing" constant="20" id="B7D-Oy-0KF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Pm0-3z-ltj" secondAttribute="bottom" constant="20" id="Bd6-2z-Q6E"/>
+                <constraint firstItem="1y7-31-qlM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="Fia-v1-3Dy"/>
+                <constraint firstItem="PrG-NF-btU" firstAttribute="top" secondItem="1y7-31-qlM" secondAttribute="bottom" constant="20" id="HIF-Yg-V7N"/>
+                <constraint firstItem="PrG-NF-btU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zDI-CV-x5M"/>
+            </constraints>
+            <point key="canvasLocation" x="152" y="-8"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Logo" width="170.66667175292969" height="190"/>
+        <namedColor name="baseColor">
+            <color red="0.27843137254901962" green="0.35686274509803922" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
