@@ -11,6 +11,8 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    let searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,6 +20,14 @@ class MainVC: UIViewController {
         setupTableView()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        navigationItem.hidesSearchBarWhenScrolling = true
+    }
     //MARK: - @IBAction Functions
     
     
@@ -26,12 +36,24 @@ class MainVC: UIViewController {
     
     func setupNavBar(){
         navigationItem.title = "Vacancies"
-
+        
         let filterBtn = UIBarButtonItem(image: UIImage(systemName: "slider.horizontal.3"),
                                         style: .done,
                                         target: self,
-                                        action: nil)
-        navigationItem.rightBarButtonItem = filterBtn
+                                        action: #selector(filterBtnHandler))
+        let searchBtn = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"),
+                                        style: .done,
+                                        target: self,
+                                        action: #selector(searchBtnHandler))
+        navigationItem.rightBarButtonItems = [filterBtn, searchBtn]
+        
+        
+        searchController.delegate = self
+        //            searchController.searchResultsUpdater = self.viewModel
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search vacancy"
+        self.navigationItem.searchController = searchController
+        self.definesPresentationContext = true
     }
     
     func setupTableView(){
@@ -42,6 +64,26 @@ class MainVC: UIViewController {
                            forCellReuseIdentifier: "VacancyCell")
         tableView.separatorStyle = .none
         tableView.layer.masksToBounds = true
+    }
+    
+    //MARK: - @objc functions
+    
+    @objc func filterBtnHandler(){
+        
+        let vc = FilterVC(nibName: "FilterVC", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    @objc func searchBtnHandler(){
+        self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0),
+                                   at: .top,
+                                   animated: true)
+        navigationItem.hidesSearchBarWhenScrolling = false
+        
+        DispatchQueue.main.async {
+            self.searchController.searchBar.becomeFirstResponder()
+        }
     }
 
 }
@@ -61,5 +103,21 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         220
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailVC(nibName: "DetailVC", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath == IndexPath(item: 0, section: 0) {
+            self.navigationItem.hidesSearchBarWhenScrolling = true
+        }
+    }
+    
+}
+
+extension MainVC: UISearchControllerDelegate {
+    func didPresentSearchController(_ searchController: UISearchController) {
+        
+    }
 }

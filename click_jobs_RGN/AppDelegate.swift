@@ -18,7 +18,7 @@ var window: UIWindow?
         window = UIWindow()
         
         let vc = WelcomeVC(nibName: "WelcomeVC", bundle: nil)
-//        let vc = SignInVC(nibName: "SignInVC", bundle: nil)
+//        let vc = DetailVC(nibName: "DetailVC", bundle: nil)
 
         let nav = UINavigationController(rootViewController: vc)
         

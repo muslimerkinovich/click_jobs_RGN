@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2AF45E299145F10003F0C9 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF45C299145F10003F0C9 /* DetailVC.swift */; };
+		FA2AF45F299145F10003F0C9 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2AF45D299145F10003F0C9 /* DetailVC.xib */; };
+		FA2AF462299223FE0003F0C9 /* BtnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF460299223FE0003F0C9 /* BtnCell.swift */; };
+		FA2AF463299223FE0003F0C9 /* BtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2AF461299223FE0003F0C9 /* BtnCell.xib */; };
+		FA2AF46D2993A9880003F0C9 /* InfoColCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2AF46B2993A9880003F0C9 /* InfoColCell.swift */; };
+		FA2AF46E2993A9880003F0C9 /* InfoColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2AF46C2993A9880003F0C9 /* InfoColCell.xib */; };
 		FA5CCAC2298C8EDC000FC0F0 /* ProfileColCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5CCAC1298C8EDC000FC0F0 /* ProfileColCell.xib */; };
 		FA7E0737298C3E1300A92BC9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E0736298C3E1300A92BC9 /* Extensions.swift */; };
 		FA7E073A298C46D300A92BC9 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E0738298C46D300A92BC9 /* SignUpVC.swift */; };
@@ -24,6 +30,8 @@
 		FA860149298D2D98008DF93B /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860147298D2D98008DF93B /* FilterVC.xib */; };
 		FA86014C298D2DAB008DF93B /* AddVacancyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86014A298D2DAB008DF93B /* AddVacancyVC.swift */; };
 		FA86014D298D2DAB008DF93B /* AddVacancyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA86014B298D2DAB008DF93B /* AddVacancyVC.xib */; };
+		FA91F274299470060071C182 /* FilterDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91F272299470050071C182 /* FilterDropDownCell.swift */; };
+		FA91F275299470060071C182 /* FilterDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA91F273299470050071C182 /* FilterDropDownCell.xib */; };
 		FAA2D141298AF59A007E3DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2D140298AF59A007E3DAD /* AppDelegate.swift */; };
 		FAA2D14B298AF59A007E3DAD /* click_jobs_RGN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA2D149298AF59A007E3DAD /* click_jobs_RGN.xcdatamodeld */; };
 		FAA2D14D298AF59C007E3DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2D14C298AF59C007E3DAD /* Assets.xcassets */; };
@@ -34,9 +42,16 @@
 		FAE9966D298B0B5500CCBAA5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9966C298B0B5500CCBAA5 /* CustomTextField.swift */; };
 		FAE99670298B123D00CCBAA5 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE9966E298B123D00CCBAA5 /* SignInVC.swift */; };
 		FAE99671298B123D00CCBAA5 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE9966F298B123D00CCBAA5 /* SignInVC.xib */; };
+		FAFFEAE0299509F1000B9AD5 /* FilterTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2AF45C299145F10003F0C9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		FA2AF45D299145F10003F0C9 /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		FA2AF460299223FE0003F0C9 /* BtnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BtnCell.swift; sourceTree = "<group>"; };
+		FA2AF461299223FE0003F0C9 /* BtnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BtnCell.xib; sourceTree = "<group>"; };
+		FA2AF46B2993A9880003F0C9 /* InfoColCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoColCell.swift; sourceTree = "<group>"; };
+		FA2AF46C2993A9880003F0C9 /* InfoColCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoColCell.xib; sourceTree = "<group>"; };
 		FA5CCAC1298C8EDC000FC0F0 /* ProfileColCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileColCell.xib; sourceTree = "<group>"; };
 		FA7E0736298C3E1300A92BC9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FA7E0738298C46D300A92BC9 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -54,6 +69,8 @@
 		FA860147298D2D98008DF93B /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
 		FA86014A298D2DAB008DF93B /* AddVacancyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVacancyVC.swift; sourceTree = "<group>"; };
 		FA86014B298D2DAB008DF93B /* AddVacancyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVacancyVC.xib; sourceTree = "<group>"; };
+		FA91F272299470050071C182 /* FilterDropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDropDownCell.swift; sourceTree = "<group>"; };
+		FA91F273299470050071C182 /* FilterDropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDropDownCell.xib; sourceTree = "<group>"; };
 		FAA2D13D298AF59A007E3DAD /* click_jobs_RGN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = click_jobs_RGN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2D140298AF59A007E3DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA2D14A298AF59A007E3DAD /* click_jobs_RGN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = click_jobs_RGN.xcdatamodel; sourceTree = "<group>"; };
@@ -66,6 +83,7 @@
 		FAE9966C298B0B5500CCBAA5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		FAE9966E298B123D00CCBAA5 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		FAE9966F298B123D00CCBAA5 /* SignInVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
+		FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTypeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +106,12 @@
 				FA5CCAC1298C8EDC000FC0F0 /* ProfileColCell.xib */,
 				FA860142298D0F52008DF93B /* SettingsCell.swift */,
 				FA860143298D0F52008DF93B /* SettingsCell.xib */,
+				FA2AF460299223FE0003F0C9 /* BtnCell.swift */,
+				FA2AF461299223FE0003F0C9 /* BtnCell.xib */,
+				FA2AF46B2993A9880003F0C9 /* InfoColCell.swift */,
+				FA2AF46C2993A9880003F0C9 /* InfoColCell.xib */,
+				FA91F272299470050071C182 /* FilterDropDownCell.swift */,
+				FA91F273299470050071C182 /* FilterDropDownCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -95,6 +119,7 @@
 		FAA2D134298AF59A007E3DAD = {
 			isa = PBXGroup;
 			children = (
+				FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */,
 				FAA2D13F298AF59A007E3DAD /* click_jobs_RGN */,
 				FAA2D13E298AF59A007E3DAD /* Products */,
 			);
@@ -137,6 +162,7 @@
 				FA86014A298D2DAB008DF93B /* AddVacancyVC.swift */,
 				FA7E0747298C75A500A92BC9 /* ProfileVC.swift */,
 				FA860146298D2D98008DF93B /* FilterVC.swift */,
+				FA2AF45C299145F10003F0C9 /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +177,7 @@
 				FA86014B298D2DAB008DF93B /* AddVacancyVC.xib */,
 				FA7E0748298C75A500A92BC9 /* ProfileVC.xib */,
 				FA860147298D2D98008DF93B /* FilterVC.xib */,
+				FA2AF45D299145F10003F0C9 /* DetailVC.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,10 +263,14 @@
 				FA7E073B298C46D300A92BC9 /* SignUpVC.xib in Resources */,
 				FA860145298D0F52008DF93B /* SettingsCell.xib in Resources */,
 				FA5CCAC2298C8EDC000FC0F0 /* ProfileColCell.xib in Resources */,
+				FA2AF463299223FE0003F0C9 /* BtnCell.xib in Resources */,
 				FA7E0741298C5E0700A92BC9 /* MainVC.xib in Resources */,
+				FA91F275299470060071C182 /* FilterDropDownCell.xib in Resources */,
 				FA7E0746298C643300A92BC9 /* VacancyCell.xib in Resources */,
 				FAE99671298B123D00CCBAA5 /* SignInVC.xib in Resources */,
+				FA2AF45F299145F10003F0C9 /* DetailVC.xib in Resources */,
 				FAA2D14D298AF59C007E3DAD /* Assets.xcassets in Resources */,
+				FA2AF46E2993A9880003F0C9 /* InfoColCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,11 +281,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2AF46D2993A9880003F0C9 /* InfoColCell.swift in Sources */,
 				FA7E073A298C46D300A92BC9 /* SignUpVC.swift in Sources */,
+				FA2AF462299223FE0003F0C9 /* BtnCell.swift in Sources */,
 				FAE9966D298B0B5500CCBAA5 /* CustomTextField.swift in Sources */,
 				FAD86985298C8E89003DC39C /* ProfileColCell.swift in Sources */,
+				FAFFEAE0299509F1000B9AD5 /* FilterTypeModel.swift in Sources */,
 				FA7E0737298C3E1300A92BC9 /* Extensions.swift in Sources */,
 				FA860144298D0F52008DF93B /* SettingsCell.swift in Sources */,
+				FA2AF45E299145F10003F0C9 /* DetailVC.swift in Sources */,
 				FA86014C298D2DAB008DF93B /* AddVacancyVC.swift in Sources */,
 				FA7E0745298C643300A92BC9 /* VacancyCell.swift in Sources */,
 				FAE99669298B052600CCBAA5 /* WelcomeVC.swift in Sources */,
@@ -264,6 +299,7 @@
 				FAA2D141298AF59A007E3DAD /* AppDelegate.swift in Sources */,
 				FA7E073D298C5BB000A92BC9 /* TabBarVC.swift in Sources */,
 				FA7E0749298C75A500A92BC9 /* ProfileVC.swift in Sources */,
+				FA91F274299470060071C182 /* FilterDropDownCell.swift in Sources */,
 				FAE99670298B123D00CCBAA5 /* SignInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
