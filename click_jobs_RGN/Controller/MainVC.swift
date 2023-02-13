@@ -59,9 +59,9 @@ class MainVC: UIViewController {
     func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "VacancyCell",
+        tableView.register(UINib(nibName: "EmployeeCell",
                                  bundle: nil),
-                           forCellReuseIdentifier: "VacancyCell")
+                           forCellReuseIdentifier: "EmployeeCell")
         tableView.separatorStyle = .none
         tableView.layer.masksToBounds = true
     }
@@ -94,7 +94,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VacancyCell") as! VacancyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell") as! EmployeeCell
         cell.selectionStyle = .none
         return cell
     }

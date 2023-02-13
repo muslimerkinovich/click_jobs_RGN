@@ -6,13 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInVC: UIViewController {
 
     @IBOutlet weak var emailTextField: CustomTextField!
     @IBOutlet weak var passwordTextField: CustomTextField!
     
-    
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +30,10 @@ class SignInVC: UIViewController {
     }
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
-        let tabBar = TabBarVC()
-        tabBar.modalPresentationStyle = .fullScreen
-        self.present(tabBar, animated: true)
+//        let tabBar = TabBarVC()
+//        tabBar.modalPresentationStyle = .fullScreen
+//        self.present(tabBar, animated: true)
+        self.signIn(login: emailTextField.text ?? "", password: passwordTextField.text ?? "")
     }
     
     @IBAction func signInWithGoogleBtnPressed(_ sender: UIButton) {
@@ -76,4 +78,26 @@ class SignInVC: UIViewController {
     }
     */
 
+}
+
+extension SignInVC {
+    func signIn(login: String, password: String) {
+        let users = db.collection("user")
+    
+        let _ = users.whereField("phone", isEqualTo: login).whereField("password", isEqualTo: password).getDocuments { snapshot, error in
+            if let err = error {
+                print("error", err)
+            }else {
+                if let snap = snapshot {
+                    if !snap.isEmpty {
+                        let data = snap.documents.first!
+                        print(data, "first")
+                        
+                        let isEmployer = data.data()["isEmployer"] as? Bool ?? false
+                        SharedManager().setToken(id: data.documentID, isEmployer: isEmployer)
+                    }
+                }
+            }
+        }
+    }
 }

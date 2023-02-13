@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Eve-Cq-Czm">
-                    <rect key="frame" x="20" y="68" width="374" height="606"/>
+                    <rect key="frame" x="20" y="68" width="374" height="526"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome back! 👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRg-5s-2Gt">
                             <rect key="frame" x="0.0" y="0.0" width="374" height="48"/>
@@ -139,22 +139,8 @@ continue where you left off by logging in</string>
                                 <action selector="signInWithGoogleBtnPressed:" destination="-1" eventType="touchUpInside" id="y4H-8c-B9I"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOh-xT-vma">
-                            <rect key="frame" x="0.0" y="546" width="374" height="60"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="facebook" title="Sign ln with Google" imagePadding="20" titleAlignment="center">
-                                <backgroundConfiguration key="background">
-                                    <color key="strokeColor" systemColor="systemGray3Color"/>
-                                </backgroundConfiguration>
-                                <color key="baseForegroundColor" systemColor="systemGrayColor"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="signInWithFacebookPressed:" destination="-1" eventType="touchUpInside" id="e6Y-uN-Hzc"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="EOh-xT-vma" firstAttribute="height" secondItem="Zj1-gh-E5l" secondAttribute="height" id="879-S9-lu7"/>
                         <constraint firstItem="mHe-B9-zjo" firstAttribute="height" secondItem="Zj1-gh-E5l" secondAttribute="height" id="jIC-Ti-2Vi"/>
                         <constraint firstItem="Dav-b4-wCr" firstAttribute="height" secondItem="Zj1-gh-E5l" secondAttribute="height" id="nBn-H7-Vg0"/>
                         <constraint firstItem="7EG-pC-wJ1" firstAttribute="height" secondItem="Zj1-gh-E5l" secondAttribute="height" id="ul0-WN-oWM"/>
@@ -206,7 +192,6 @@ continue where you left off by logging in</string>
     </objects>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
-        <image name="facebook" width="40" height="40"/>
         <image name="google" width="40" height="40"/>
         <image name="lock" catalog="system" width="125" height="128"/>
         <namedColor name="baseColor">

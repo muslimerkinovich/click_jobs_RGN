@@ -12,21 +12,43 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewControllers = [
+        setupVCs()
+        
+    }
+    
+    func setupVCs(){
+        
+        var isEmployer = UserDefaults.standard.bool(forKey: "IS_EMPLOYER")
+        
+        isEmployer = true
+        let employerVCs = [
             generateVC(vc: MainVC(nibName: "MainVC", bundle: nil),
-                       title: "Home",
+                       title: "Employee",
                        image: UIImage(systemName: "house")),
             generateVC(vc: AddVacancyVC(nibName: "AddVacancyVC", bundle: nil),
                        title: "Add",
                        image: UIImage(systemName: "plus")),
+            generateVC(vc: MainVC(nibName: "MainVC", bundle: nil),
+                       title: "Applicants",
+                       image: UIImage(systemName: "bookmark")),
+            generateVC(vc: ProfileVC(nibName: "ProfileVC", bundle: nil),
+                       title: "Profile",
+                       image: UIImage(systemName: "person")),
+        ]
+        
+        let employeeVCs = [
+            generateVC(vc: MainVC(nibName: "MainVC", bundle: nil),
+                       title: "Vacancy",
+                       image: UIImage(systemName: "house")),
             generateVC(vc: MainVC(nibName: "MainVC", bundle: nil),
                        title: "Saved",
                        image: UIImage(systemName: "bookmark")),
             generateVC(vc: ProfileVC(nibName: "ProfileVC", bundle: nil),
                        title: "Profile",
                        image: UIImage(systemName: "person")),
-            
         ]
+        
+        viewControllers = isEmployer ? employerVCs : employeeVCs
     }
     
 
