@@ -13,12 +13,17 @@ class WelcomeVC: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func startBtnPressed(_ sender: UIButton) {
+    @IBAction func loginBtnPressed(_ sender: UIButton) {
         let vc = SignInVC(nibName: "SignInVC", bundle: nil)
-        
         vc.modalPresentationStyle = .fullScreen
-        
         self.present(vc, animated: true)
     }
+    
+    @IBAction func signupBtnPressed(_ sender: UIButton) {
+        let vc = SignUpVC(nibName: "SignUpVC", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
     
 }

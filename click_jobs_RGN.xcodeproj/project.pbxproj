@@ -171,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8AACB7299A8B5800FF507E /* GoogleService-Info.plist */,
-				FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */,
 				FAA2D13F298AF59A007E3DAD /* click_jobs_RGN */,
 				FAA2D13E298AF59A007E3DAD /* Products */,
 				0D527DEFEF53985C31B8CFCA /* Pods */,
@@ -240,6 +239,7 @@
 		FAE99666298B050200CCBAA5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */,
 				FA8AACB5299A85C400FF507E /* User.swift */,
 			);
 			path = Model;

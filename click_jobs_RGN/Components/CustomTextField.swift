@@ -61,7 +61,7 @@ class CustomTextField: UITextField {
     }
     
     
-    func setLeftImage(image: UIImage?, tintColor: UIColor = .systemGray){
+    func setLeftImage(image: UIImage?, tintColor: UIColor = .black){
         
         if let img = image {
             self.leftViewMode = UITextField.ViewMode.always
@@ -94,7 +94,8 @@ class CustomTextField: UITextField {
     }
     
     let rightBtn = UIButton()
-    func setRightImage(image: UIImage?, tintColor: UIColor = .systemGray){
+    
+    func setRightImage(image: UIImage?, tintColor: UIColor = .black){
         
         if let img = image {
             self.rightViewMode = UITextField.ViewMode.always
@@ -111,7 +112,7 @@ class CustomTextField: UITextField {
                                     height: height)
             rightBtn.configuration = .plain()
             rightBtn.configuration?.title = ""
-            rightBtn.configuration?.image = img
+            rightBtn.configuration?.image = img.withTintColor(tintColor)
             rightBtn.addTarget(self, action: #selector(rightBtnHandler(_ :)), for: .touchUpInside)
             imageContainer.addSubview(rightBtn)
             
@@ -132,10 +133,12 @@ class CustomTextField: UITextField {
     
     @objc func rightBtnHandler(_ sender: UIButton){
         if sender.tag == 0 {
-            self.setRightImage(image: UIImage(systemName: "eye.slash"))
+            self.setRightImage(image: UIImage(systemName: "eye"))
+            self.isSecureTextEntry = true
             sender.tag = 1
         } else {
-            self.setRightImage(image: UIImage(systemName: "eye"))
+            self.setRightImage(image: UIImage(systemName: "eye.slash"))
+            self.isSecureTextEntry = false
             sender.tag = 0
         }
     }
@@ -146,8 +149,9 @@ class CustomTextField: UITextField {
     func setup() {
         
         setPadding(paddingLeft: 10, paddingRight: 10)
-        setBorder(borderWidth: 1, borderColor: .systemGray2)
+        setBorder(borderWidth: 1, borderColor: .black)
         setCorner(cornerStyle: .small)
+        self.textColor = .black
         
     }
     
@@ -156,6 +160,7 @@ class CustomTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
+        
     }
     
     required public init?(coder aDecoder: NSCoder) {

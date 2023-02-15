@@ -46,7 +46,6 @@ class SignInVC: UIViewController {
         
         let signUpVC = SignUpVC(nibName: "SignUpVC", bundle: nil)
         signUpVC.modalPresentationStyle = .fullScreen
-        signUpVC.modalTransitionStyle = .flipHorizontal
         self.present(signUpVC, animated: true)
     }
     

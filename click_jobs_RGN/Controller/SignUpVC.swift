@@ -9,93 +9,105 @@ import UIKit
 import Firebase
 
 class SignUpVC: UIViewController {
-
-    @IBOutlet weak var userNameTextField: CustomTextField!
-    @IBOutlet weak var emailTextField: CustomTextField!
-    @IBOutlet weak var passwordTextField: CustomTextField!
-    @IBOutlet weak var passwordConfirmTextField: CustomTextField!
     
-    @IBOutlet weak var segmetnController: UISegmentedControl!
+    
+    @IBOutlet weak var typeController: UISegmentedControl!
+    @IBOutlet weak var firstNameTF: CustomTextField!
+    @IBOutlet weak var lastNameTF: CustomTextField!
+    @IBOutlet weak var companyNameTF: CustomTextField!
+    @IBOutlet weak var emailTF: CustomTextField!
+    @IBOutlet weak var phoneNumber: CustomTextField!
+    @IBOutlet weak var passwordTF: CustomTextField!
+    @IBOutlet weak var passwordConfirm: CustomTextField!
     
     
     var db = Firestore.firestore()
     
+    var isEmployer: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        enableDismissKeyboard()        
         setupTextFields()
-        enableDismissKeyboard()
-        navigationItem.title = "Sign Up VC"
+        updateTextFields(isEmployer: isEmployer)
+        
     }
     
     //MARK: - @IBAction Functions
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
-//        let tabBar = TabBarVC()
-//        tabBar.modalPresentationStyle = .fullScreen
-//        self.present(tabBar, animated: true)
-        registerUser()
+        //        let tabBar = TabBarVC()
+        //        tabBar.modalPresentationStyle = .fullScreen
+        //        self.present(tabBar, animated: true)
+        //        registerUser()
     }
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
-        dismiss(animated: true)
+        let vc = SignInVC(nibName: "SignInVC", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func typeControllerChanged(_ sender: UISegmentedControl) {
+        isEmployer = sender.selectedSegmentIndex == 0
+        updateTextFields(isEmployer: isEmployer)
     }
     
     
-
+    
+    
     //MARK: - Setup Functions
     
+    
     func setupTextFields(){
-        userNameTextField.setLeftImage(image: UIImage(systemName: "person"),
-                                       tintColor: .systemGray)
         
-        emailTextField.setLeftImage(image: UIImage(systemName: "envelope"),
-                                    tintColor: .systemGray)
+        passwordTF.setRightImage(image: UIImage(systemName: "eye"))
+        passwordConfirm.setRightImage(image: UIImage(systemName: "eye"))
         
-        passwordTextField.setLeftImage(image: UIImage(systemName: "lock"),
-                                       tintColor: .systemGray)
-        passwordTextField.setRightImage(image: UIImage(systemName: "eye"),
-                                        tintColor: .systemGray)
-        
-        passwordConfirmTextField.setLeftImage(image: UIImage(systemName: "lock"),
-                                       tintColor: .systemGray)
-        passwordConfirmTextField.setRightImage(image: UIImage(systemName: "eye"),
-                                        tintColor: .systemGray)
     }
-
-}
-
-extension SignUpVC {
-    func registerUser() {
-        let isEmployer = segmetnController.selectedSegmentIndex == 0
-        let user = User(id: "12",
-                        firstName: userNameTextField.text ?? "",
-                        lastName: "",
-                        phone: emailTextField.text ?? "",
-                        email: emailTextField.text ?? "",
-                        tgUsername: "sldj",
-                        isOccupied: true,
-                        resumeUrl: "sdk",
-                        savedVacancies: [],
-                        login: "23232",
-                        password: passwordTextField.text ?? "",
-                        companyID: "sds",
-                        isEmployer: isEmployer)
+    
+    func updateTextFields(isEmployer: Bool){
         
-        var ref: DocumentReference? = nil
+        firstNameTF.isHidden = !isEmployer
+        lastNameTF.isHidden = !isEmployer
+        companyNameTF.isHidden = isEmployer
         
-        ref = self.db.collection("user").addDocument(data: user.getDictionary()) { error in
-            if let er = error {
-                print(er.localizedDescription, "ERROR")
-            }else {
-                
-                var newU = user
-                newU.id = ref!.documentID
-                
-                print(newU, "USER")
-                
-                SharedManager().setToken(id: ref!.documentID, isEmployer: user.isEmployer)
-            }
-        }
     }
+    
+    
 }
+//
+//extension SignUpVC {
+//    func registerUser() {
+//        let user = User(id: "12",
+//                        firstName: userNameTextField.text ?? "",
+//                        lastName: "",
+//                        phone: emailTextField.text ?? "",
+//                        email: emailTextField.text ?? "",
+//                        tgUsername: "sldj",
+//                        isOccupied: true,
+//                        resumeUrl: "sdk",
+//                        savedVacancies: [],
+//                        login: "23232",
+//                        password: passwordTextField.text ?? "",
+//                        companyID: "sds",
+//                        isEmployer: isEmployer)
+//
+//        var ref: DocumentReference? = nil
+//
+//        ref = self.db.collection("user").addDocument(data: user.getDictionary()) { error in
+//            if let er = error {
+//                print(er.localizedDescription, "ERROR")
+//            }else {
+//
+//                var newU = user
+//                newU.id = ref!.documentID
+//
+//                print(newU, "USER")
+//
+//                SharedManager().setToken(id: ref!.documentID, isEmployer: user.isEmployer)
+//            }
+//        }
+//    }
+//}

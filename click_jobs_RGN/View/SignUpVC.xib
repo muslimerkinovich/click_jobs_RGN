@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,11 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="click_jobs_RGN" customModuleProvider="target">
             <connections>
-                <outlet property="emailTextField" destination="2y1-JI-Kbk" id="8TF-fJ-giD"/>
-                <outlet property="passwordConfirmTextField" destination="jdD-pL-Frg" id="X1V-8L-BEh"/>
-                <outlet property="passwordTextField" destination="qx0-bF-KhU" id="Xi0-Zr-i7P"/>
-                <outlet property="segmetnController" destination="1c0-rm-0rd" id="jqH-7x-wEz"/>
-                <outlet property="userNameTextField" destination="rCl-DN-9oZ" id="b8j-6z-zhj"/>
+                <outlet property="companyNameTF" destination="mNH-Ng-dkA" id="4Xh-Ey-64p"/>
+                <outlet property="emailTF" destination="qx0-bF-KhU" id="zVo-iT-8w5"/>
+                <outlet property="firstNameTF" destination="rCl-DN-9oZ" id="6OR-gx-2x2"/>
+                <outlet property="lastNameTF" destination="2y1-JI-Kbk" id="Lah-W8-toP"/>
+                <outlet property="passwordConfirm" destination="0m0-Fv-qe2" id="67v-Sz-wm0"/>
+                <outlet property="passwordTF" destination="fKf-km-fxV" id="yEQ-EB-3sx"/>
+                <outlet property="phoneNumber" destination="jdD-pL-Frg" id="j7a-jU-7a8"/>
+                <outlet property="typeController" destination="1c0-rm-0rd" id="oYz-1w-0FN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,182 +27,303 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="CEs-aS-ayf">
-                    <rect key="frame" x="20" y="68" width="374" height="652.5"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmR-qs-7mi">
+                    <rect key="frame" x="0.0" y="48" width="414" height="744"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Click Jobs👋" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-d1-Fiw">
-                            <rect key="frame" x="0.0" y="0.0" width="374" height="95.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, | guess you are new around here. You can start using the application after sign up." textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hup-ao-Ofh">
-                            <rect key="frame" x="0.0" y="117.5" width="374" height="43"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <color key="textColor" systemColor="systemGray2Color"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-DN-9oZ" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="182.5" width="374" height="60"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" systemColor="systemGrayColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
-                                    <imageReference key="value" image="envelope" catalog="system" symbolScale="default"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                    <color key="value" systemColor="systemGray6Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-JI-Kbk" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="264.5" width="374" height="60"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" systemColor="systemGrayColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" textContentType="email"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
-                                    <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                    <color key="value" systemColor="systemGray6Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-bF-KhU" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="346.5" width="374" height="60"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" systemColor="systemGrayColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
-                                    <imageReference key="value" image="envelope" catalog="system" symbolScale="default"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                    <color key="value" systemColor="systemGray6Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password-Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-pL-Frg" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="428.5" width="374" height="60"/>
-                            <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" systemColor="systemGrayColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
-                                    <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                    <color key="value" systemColor="systemGray6Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                    <real key="value" value="1"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
-                                    <color key="value" systemColor="systemGray2Color"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" systemColor="systemGray3Color"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1c0-rm-0rd">
-                            <rect key="frame" x="0.0" y="510.5" width="374" height="61"/>
-                            <segments>
-                                <segment title="Employer"/>
-                                <segment title="Employee"/>
-                            </segments>
-                        </segmentedControl>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZn-qF-oCd">
-                            <rect key="frame" x="0.0" y="592.5" width="374" height="60"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="filled" title="Sign In">
-                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
-                                <color key="baseBackgroundColor" name="baseColor"/>
-                            </buttonConfiguration>
-                            <connections>
-                                <action selector="signUpBtnPressed:" destination="-1" eventType="touchUpInside" id="Gyl-5h-HT9"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NMc-dm-HsA">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="670"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXV-Da-2Ev">
+                                    <rect key="frame" x="155.5" y="0.0" width="103" height="36"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="CEs-aS-ayf">
+                                    <rect key="frame" x="20" y="56" width="374" height="614"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1c0-rm-0rd">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="51"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="1cB-dC-8Ie"/>
+                                            </constraints>
+                                            <segments>
+                                                <segment title="Employer"/>
+                                                <segment title="Employee"/>
+                                            </segments>
+                                            <connections>
+                                                <action selector="typeControllerChanged:" destination="-1" eventType="valueChanged" id="gcU-DP-1Vo"/>
+                                            </connections>
+                                        </segmentedControl>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-NY-Yvr">
+                                            <rect key="frame" x="0.0" y="72" width="374" height="470"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rCl-DN-9oZ" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="tgr-9N-F2T"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="envelope" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-JI-Kbk" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="70" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNH-Ng-dkA" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="140" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-bF-KhU" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="210" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="envelope" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jdD-pL-Frg" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="280" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="tel"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKf-km-fxV" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="350" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="lock" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password-Confirm" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0m0-Fv-qe2" customClass="CustomTextField" customModule="click_jobs_RGN" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="420" width="374" height="50"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="R5p-GC-58b"/>
+                                                    </constraints>
+                                                    <color key="textColor" systemColor="systemPinkColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="leftImage">
+                                                            <imageReference key="value" image="envelope" catalog="system" symbolScale="default"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                            <color key="value" systemColor="systemGray6Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="ImageColor">
+                                                            <color key="value" systemColor="systemGray2Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" systemColor="systemGray3Color"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZn-qF-oCd">
+                                            <rect key="frame" x="0.0" y="564" width="374" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="jL7-Hy-qVQ"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                                <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                                <color key="baseBackgroundColor" name="baseColor"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="signUpBtnPressed:" destination="-1" eventType="touchUpInside" id="hHa-Qp-9iH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="CEs-aS-ayf" firstAttribute="leading" secondItem="NMc-dm-HsA" secondAttribute="leading" constant="20" id="66a-am-MFQ"/>
+                                <constraint firstAttribute="trailing" secondItem="CEs-aS-ayf" secondAttribute="trailing" constant="20" id="9Kw-XB-AKc"/>
+                            </constraints>
+                        </stackView>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="qx0-bF-KhU" firstAttribute="height" secondItem="uZn-qF-oCd" secondAttribute="height" id="GJz-VN-EP6"/>
-                        <constraint firstItem="rCl-DN-9oZ" firstAttribute="height" secondItem="uZn-qF-oCd" secondAttribute="height" id="V6U-Zo-HJw"/>
-                        <constraint firstItem="2y1-JI-Kbk" firstAttribute="height" secondItem="uZn-qF-oCd" secondAttribute="height" id="aOI-GW-1U3"/>
-                        <constraint firstItem="1c0-rm-0rd" firstAttribute="height" secondItem="uZn-qF-oCd" secondAttribute="height" id="qkb-Bt-dZ7"/>
-                        <constraint firstItem="jdD-pL-Frg" firstAttribute="height" secondItem="uZn-qF-oCd" secondAttribute="height" id="sb2-hh-g9g"/>
+                        <constraint firstItem="NMc-dm-HsA" firstAttribute="leading" secondItem="SmR-qs-7mi" secondAttribute="leading" id="1lc-jG-5S5"/>
+                        <constraint firstAttribute="bottom" secondItem="NMc-dm-HsA" secondAttribute="bottom" id="83N-hA-20O"/>
+                        <constraint firstAttribute="trailing" secondItem="NMc-dm-HsA" secondAttribute="trailing" id="WQD-nN-RBA"/>
+                        <constraint firstItem="NMc-dm-HsA" firstAttribute="top" secondItem="SmR-qs-7mi" secondAttribute="top" id="h5k-KH-F29"/>
                     </constraints>
-                </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poq-SK-rJx">
-                    <rect key="frame" x="61" y="817" width="292" height="40"/>
+                </scrollView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="poq-SK-rJx">
+                    <rect key="frame" x="20" y="812" width="374" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1z-aj-bEy">
-                            <rect key="frame" x="0.0" y="0.0" width="205.5" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="263" height="50"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4D-8c-mRP">
-                            <rect key="frame" x="205.5" y="0.0" width="86.5" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="Xvg-wR-GE2"/>
-                            </constraints>
+                            <rect key="frame" x="263" y="0.0" width="111" height="50"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
                                 <attributedString key="attributedTitle">
@@ -212,23 +335,29 @@
                                 </attributedString>
                             </buttonConfiguration>
                             <connections>
-                                <action selector="signInBtnPressed:" destination="-1" eventType="touchUpInside" id="nlC-AP-7ZK"/>
+                                <action selector="signInBtnPressed:" destination="-1" eventType="touchUpInside" id="yLH-2f-TWf"/>
                             </connections>
                         </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="pWg-RX-KMN"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="poq-SK-rJx" secondAttribute="bottom" constant="5" id="7hA-Fh-Nbv"/>
-                <constraint firstItem="CEs-aS-ayf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9dK-k1-4cg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CEs-aS-ayf" secondAttribute="trailing" constant="20" id="B4K-AX-cJr"/>
-                <constraint firstItem="uZn-qF-oCd" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.0669643" id="Pl6-XA-uEA"/>
-                <constraint firstItem="CEs-aS-ayf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fp9-YK-OWT"/>
-                <constraint firstItem="poq-SK-rJx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wWT-EV-8YC"/>
+                <constraint firstItem="poq-SK-rJx" firstAttribute="top" secondItem="SmR-qs-7mi" secondAttribute="bottom" constant="20" id="HFw-cI-OS7"/>
+                <constraint firstItem="NMc-dm-HsA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="KQB-mH-wmO"/>
+                <constraint firstItem="SmR-qs-7mi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PRr-0e-gEC"/>
+                <constraint firstItem="poq-SK-rJx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="b6B-7J-7Rh"/>
+                <constraint firstItem="SmR-qs-7mi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dau-tx-B4h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="poq-SK-rJx" secondAttribute="bottom" id="eB2-sD-eJs"/>
+                <constraint firstItem="SmR-qs-7mi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="giO-ol-nid"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="poq-SK-rJx" secondAttribute="trailing" constant="20" id="hd9-Hb-1Cq"/>
+                <constraint firstItem="SmR-qs-7mi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wrl-jh-eDd"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-12"/>
+            <point key="canvasLocation" x="131.8840579710145" y="-12.053571428571429"/>
         </view>
     </objects>
     <resources>
@@ -249,8 +378,11 @@
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
