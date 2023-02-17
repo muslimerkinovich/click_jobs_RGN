@@ -33,14 +33,23 @@ class SignInVC: UIViewController {
 //        let tabBar = TabBarVC()
 //        tabBar.modalPresentationStyle = .fullScreen
 //        self.present(tabBar, animated: true)
-        self.signIn(login: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+//        self.signIn(login: emailTextField.text ?? "", password: passwordTextField.text ?? "")
+        
+        APIClient.shared.isUserExist(email: emailTextField.text ?? "email@mail.com",
+                                     password: passwordTextField.text ?? "password") { user, error in
+            if let error {
+                print(error, "error print in Sign In VC")
+            } else if let user{
+                print(user)
+            } else {
+                print("User not found")
+            }
+        }
+        
+        // isuserexist and push to tabbar
     }
     
-    @IBAction func signInWithGoogleBtnPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func signInWithFacebookPressed(_ sender: UIButton) {
-    }
+
     
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         

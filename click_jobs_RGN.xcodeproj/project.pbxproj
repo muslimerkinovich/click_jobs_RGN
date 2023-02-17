@@ -21,8 +21,6 @@
 		FA7E073D298C5BB000A92BC9 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E073C298C5BAF00A92BC9 /* TabBarVC.swift */; };
 		FA7E0740298C5E0700A92BC9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E073E298C5E0700A92BC9 /* MainVC.swift */; };
 		FA7E0741298C5E0700A92BC9 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7E073F298C5E0700A92BC9 /* MainVC.xib */; };
-		FA7E0745298C643300A92BC9 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E0743298C643300A92BC9 /* EmployeeCell.swift */; };
-		FA7E0746298C643300A92BC9 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7E0744298C643300A92BC9 /* EmployeeCell.xib */; };
 		FA7E0749298C75A500A92BC9 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E0747298C75A500A92BC9 /* ProfileVC.swift */; };
 		FA7E074A298C75A500A92BC9 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA7E0748298C75A500A92BC9 /* ProfileVC.xib */; };
 		FA860144298D0F52008DF93B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA860142298D0F52008DF93B /* SettingsCell.swift */; };
@@ -31,13 +29,16 @@
 		FA860149298D2D98008DF93B /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA860147298D2D98008DF93B /* FilterVC.xib */; };
 		FA86014C298D2DAB008DF93B /* AddVacancyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86014A298D2DAB008DF93B /* AddVacancyVC.swift */; };
 		FA86014D298D2DAB008DF93B /* AddVacancyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA86014B298D2DAB008DF93B /* AddVacancyVC.xib */; };
+		FA868A96299FC1D4002F3B61 /* Vacancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA868A95299FC1D4002F3B61 /* Vacancy.swift */; };
+		FA868A99299FC296002F3B61 /* EmployeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA868A97299FC295002F3B61 /* EmployeeCell.xib */; };
+		FA868A9A299FC296002F3B61 /* EmployeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA868A98299FC296002F3B61 /* EmployeeCell.swift */; };
+		FA868A9C299FC2CF002F3B61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA868A9B299FC2CF002F3B61 /* GoogleService-Info.plist */; };
 		FA8AACAA299A742200FF507E /* VacancyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACA8299A742200FF507E /* VacancyCell.swift */; };
 		FA8AACAB299A742200FF507E /* VacancyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8AACA9299A742200FF507E /* VacancyCell.xib */; };
 		FA8AACAE299A82CC00FF507E /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACAD299A82CC00FF507E /* URLS.swift */; };
 		FA8AACB2299A841700FF507E /* SharedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACB1299A841700FF507E /* SharedManager.swift */; };
 		FA8AACB4299A843900FF507E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACB3299A843900FF507E /* APIClient.swift */; };
 		FA8AACB6299A85C400FF507E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACB5299A85C400FF507E /* User.swift */; };
-		FA8AACB8299A8B5900FF507E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA8AACB7299A8B5800FF507E /* GoogleService-Info.plist */; };
 		FA8AACBA299A8D3100FF507E /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8AACB9299A8D3100FF507E /* Cache.swift */; };
 		FA91F274299470060071C182 /* FilterDropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA91F272299470050071C182 /* FilterDropDownCell.swift */; };
 		FA91F275299470060071C182 /* FilterDropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA91F273299470050071C182 /* FilterDropDownCell.xib */; };
@@ -71,8 +72,6 @@
 		FA7E073C298C5BAF00A92BC9 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		FA7E073E298C5E0700A92BC9 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FA7E073F298C5E0700A92BC9 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
-		FA7E0743298C643300A92BC9 /* EmployeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
-		FA7E0744298C643300A92BC9 /* EmployeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
 		FA7E0747298C75A500A92BC9 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		FA7E0748298C75A500A92BC9 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		FA860142298D0F52008DF93B /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
@@ -81,13 +80,16 @@
 		FA860147298D2D98008DF93B /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
 		FA86014A298D2DAB008DF93B /* AddVacancyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVacancyVC.swift; sourceTree = "<group>"; };
 		FA86014B298D2DAB008DF93B /* AddVacancyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddVacancyVC.xib; sourceTree = "<group>"; };
+		FA868A95299FC1D4002F3B61 /* Vacancy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vacancy.swift; sourceTree = "<group>"; };
+		FA868A97299FC295002F3B61 /* EmployeeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmployeeCell.xib; sourceTree = "<group>"; };
+		FA868A98299FC296002F3B61 /* EmployeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeCell.swift; sourceTree = "<group>"; };
+		FA868A9B299FC2CF002F3B61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA8AACA8299A742200FF507E /* VacancyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyCell.swift; sourceTree = "<group>"; };
 		FA8AACA9299A742200FF507E /* VacancyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyCell.xib; sourceTree = "<group>"; };
 		FA8AACAD299A82CC00FF507E /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
 		FA8AACB1299A841700FF507E /* SharedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedManager.swift; sourceTree = "<group>"; };
 		FA8AACB3299A843900FF507E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FA8AACB5299A85C400FF507E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		FA8AACB7299A8B5800FF507E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA8AACB9299A8D3100FF507E /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		FA91F272299470050071C182 /* FilterDropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDropDownCell.swift; sourceTree = "<group>"; };
 		FA91F273299470050071C182 /* FilterDropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterDropDownCell.xib; sourceTree = "<group>"; };
@@ -138,8 +140,8 @@
 		FA7E0742298C63F900A92BC9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FA7E0743298C643300A92BC9 /* EmployeeCell.swift */,
-				FA7E0744298C643300A92BC9 /* EmployeeCell.xib */,
+				FA868A98299FC296002F3B61 /* EmployeeCell.swift */,
+				FA868A97299FC295002F3B61 /* EmployeeCell.xib */,
 				FA8AACA8299A742200FF507E /* VacancyCell.swift */,
 				FA8AACA9299A742200FF507E /* VacancyCell.xib */,
 				FAD86983298C8E89003DC39C /* ProfileColCell.swift */,
@@ -170,7 +172,6 @@
 		FAA2D134298AF59A007E3DAD = {
 			isa = PBXGroup;
 			children = (
-				FA8AACB7299A8B5800FF507E /* GoogleService-Info.plist */,
 				FAA2D13F298AF59A007E3DAD /* click_jobs_RGN */,
 				FAA2D13E298AF59A007E3DAD /* Products */,
 				0D527DEFEF53985C31B8CFCA /* Pods */,
@@ -200,6 +201,7 @@
 				FAA2D14C298AF59C007E3DAD /* Assets.xcassets */,
 				FAA2D14E298AF59C007E3DAD /* LaunchScreen.storyboard */,
 				FAA2D151298AF59C007E3DAD /* Info.plist */,
+				FA868A9B299FC2CF002F3B61 /* GoogleService-Info.plist */,
 				FAA2D149298AF59A007E3DAD /* click_jobs_RGN.xcdatamodeld */,
 			);
 			path = click_jobs_RGN;
@@ -241,6 +243,7 @@
 			children = (
 				FAFFEADF299509F1000B9AD5 /* FilterTypeModel.swift */,
 				FA8AACB5299A85C400FF507E /* User.swift */,
+				FA868A95299FC1D4002F3B61 /* Vacancy.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				FA860149298D2D98008DF93B /* FilterVC.xib in Resources */,
 				FA7E074A298C75A500A92BC9 /* ProfileVC.xib in Resources */,
 				FAA2D150298AF59C007E3DAD /* LaunchScreen.storyboard in Resources */,
+				FA868A99299FC296002F3B61 /* EmployeeCell.xib in Resources */,
 				FAE9966A298B052600CCBAA5 /* WelcomeVC.xib in Resources */,
 				FA86014D298D2DAB008DF93B /* AddVacancyVC.xib in Resources */,
 				FA7E073B298C46D300A92BC9 /* SignUpVC.xib in Resources */,
@@ -323,9 +327,8 @@
 				FA5CCAC2298C8EDC000FC0F0 /* ProfileColCell.xib in Resources */,
 				FA2AF463299223FE0003F0C9 /* BtnCell.xib in Resources */,
 				FA7E0741298C5E0700A92BC9 /* MainVC.xib in Resources */,
+				FA868A9C299FC2CF002F3B61 /* GoogleService-Info.plist in Resources */,
 				FA91F275299470060071C182 /* FilterDropDownCell.xib in Resources */,
-				FA8AACB8299A8B5900FF507E /* GoogleService-Info.plist in Resources */,
-				FA7E0746298C643300A92BC9 /* EmployeeCell.xib in Resources */,
 				FA8AACAB299A742200FF507E /* VacancyCell.xib in Resources */,
 				FAE99671298B123D00CCBAA5 /* SignInVC.xib in Resources */,
 				FA2AF45F299145F10003F0C9 /* DetailVC.xib in Resources */,
@@ -386,6 +389,7 @@
 				FA2AF46D2993A9880003F0C9 /* InfoColCell.swift in Sources */,
 				FA7E073A298C46D300A92BC9 /* SignUpVC.swift in Sources */,
 				FA2AF462299223FE0003F0C9 /* BtnCell.swift in Sources */,
+				FA868A9A299FC296002F3B61 /* EmployeeCell.swift in Sources */,
 				FA8AACB6299A85C400FF507E /* User.swift in Sources */,
 				FAE9966D298B0B5500CCBAA5 /* CustomTextField.swift in Sources */,
 				FA8AACAA299A742200FF507E /* VacancyCell.swift in Sources */,
@@ -397,13 +401,13 @@
 				FA2AF45E299145F10003F0C9 /* DetailVC.swift in Sources */,
 				FA86014C298D2DAB008DF93B /* AddVacancyVC.swift in Sources */,
 				FA8AACB4299A843900FF507E /* APIClient.swift in Sources */,
-				FA7E0745298C643300A92BC9 /* EmployeeCell.swift in Sources */,
 				FAE99669298B052600CCBAA5 /* WelcomeVC.swift in Sources */,
 				FA7E0740298C5E0700A92BC9 /* MainVC.swift in Sources */,
 				FA860148298D2D98008DF93B /* FilterVC.swift in Sources */,
 				FA8AACAE299A82CC00FF507E /* URLS.swift in Sources */,
 				FAA2D14B298AF59A007E3DAD /* click_jobs_RGN.xcdatamodeld in Sources */,
 				FA8AACB2299A841700FF507E /* SharedManager.swift in Sources */,
+				FA868A96299FC1D4002F3B61 /* Vacancy.swift in Sources */,
 				FAA2D141298AF59A007E3DAD /* AppDelegate.swift in Sources */,
 				FA7E073D298C5BB000A92BC9 /* TabBarVC.swift in Sources */,
 				FA7E0749298C75A500A92BC9 /* ProfileVC.swift in Sources */,

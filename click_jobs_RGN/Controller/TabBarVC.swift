@@ -9,6 +9,8 @@ import UIKit
 
 class TabBarVC: UITabBarController {
 
+    var isEmployer = UserDefaults.standard.bool(forKey: "IS_EMPLOYER")
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,9 +20,6 @@ class TabBarVC: UITabBarController {
     
     func setupVCs(){
         
-        var isEmployer = UserDefaults.standard.bool(forKey: "IS_EMPLOYER")
-        
-        isEmployer = true
         let employerVCs = [
             generateVC(vc: MainVC(nibName: "MainVC", bundle: nil),
                        title: "Employee",
