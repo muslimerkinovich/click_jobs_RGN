@@ -30,7 +30,7 @@ class MainVC: UIViewController {
     }
     //MARK: - @IBAction Functions
     
-    
+    let text = LangKeys.signInWithGoogle.lowercased()
     
     //MARK: - Setup Functions
     

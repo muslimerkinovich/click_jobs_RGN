@@ -9,8 +9,13 @@ import UIKit
 
 class WelcomeVC: UIViewController {
 
+    @IBOutlet weak var subtitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        subtitle.text = LangKeys.app_subtitle.localized()
+        
     }
 
     @IBAction func loginBtnPressed(_ sender: UIButton) {

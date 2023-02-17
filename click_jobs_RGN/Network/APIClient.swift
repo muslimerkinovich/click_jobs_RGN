@@ -30,7 +30,7 @@ class APIClient {
 
                     let user = User(userID: document["userID"] as? Int ?? 1 ,
                                     email: document["email"] as? String ?? "",
-                                    phoneNumber: document["phoneNumber"] as? String ?? "",
+//                                    phoneNumber: document["phoneNumber"] as? String ?? "",
                                     password: document["password"] as? String ?? "",
                                     isEmployer: document["isEmployer"] as? Bool ?? true)
                     

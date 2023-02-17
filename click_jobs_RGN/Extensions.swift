@@ -50,3 +50,16 @@ extension UIView {
             }
         }
 }
+
+
+//MARK: LANGUAGE
+extension String {
+    func localized() -> String {
+//        UserDefaults.standard.setValue("ru", forKey: "language")
+        let lang = UserDefaults.standard.string(forKey: "language") ?? "uz";//"ru", "en"
+        let path = Bundle.main.path(forResource: lang, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
+    }
+}
+
